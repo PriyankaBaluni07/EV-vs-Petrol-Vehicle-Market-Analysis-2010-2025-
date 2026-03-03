@@ -83,10 +83,7 @@ FROM ev_vs_petrol
 GROUP BY year
 ORDER BY year;
 
-Analysis- You should summarize the **trend and highlight the peak year** rather than listing all values.
-
-**Analysis:**
-This query calculates the total EV sales for each year to examine adoption trends over time. The results show a steady and significant increase in EV sales from **20,139 units in 2010** to **19,673,169 units in 2025**, with **2025 recording the highest sales**, indicating rapid global growth in EV adoption.
+Analysis- This query calculates the total EV sales for each year to examine adoption trends over time. The results show a steady and significant increase in EV sales from 20,139 units in 2010 to 19,673,169 units in 2025, with 2025 recording the highest sales, indicating rapid global growth in EV adoption.
 
 
 
