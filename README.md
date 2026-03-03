@@ -78,7 +78,7 @@ Analysis- The query displayed the first 10 rows of the dataset, which helps revi
 ### Query 7- Total EV Sales by Year
 
 SELECT year,
-SUM(ev_sales) AS total_ev_sales
+SUM(ev_sales)
 FROM ev_vs_petrol
 GROUP BY year
 ORDER BY year;
