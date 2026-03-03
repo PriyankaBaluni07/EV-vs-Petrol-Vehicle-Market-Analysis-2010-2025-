@@ -66,3 +66,27 @@ SELECT MIN(year) AS start_date, MAX(year) AS end_date
 FROM ev_vs_petrol;
 
 Analysis- Identifies the earliest and latest years in the dataset, showing its overall time span. The MIN(year) is labeled as start_year and MAX(year) as end_year for better readability, revealing that the data ranges from 2010 to 2025.
+
+### Query 6- Sample Data Preview
+
+SELECT * FROM
+ev_vs_petrol 
+LIMIT 10;
+
+Analysis- The query displayed the first 10 rows of the dataset, which helps review the table structure, understand the available variables, and verify that the data has been imported correctly before performing further analysis.
+
+### Query 7- Total EV Sales by Year
+
+SELECT year,
+SUM(ev_sales) AS total_ev_sales
+FROM ev_vs_petrol
+GROUP BY year
+ORDER BY year;
+
+Analysis- You should summarize the **trend and highlight the peak year** rather than listing all values.
+
+**Analysis:**
+This query calculates the total EV sales for each year to examine adoption trends over time. The results show a steady and significant increase in EV sales from **20,139 units in 2010** to **19,673,169 units in 2025**, with **2025 recording the highest sales**, indicating rapid global growth in EV adoption.
+
+
+
