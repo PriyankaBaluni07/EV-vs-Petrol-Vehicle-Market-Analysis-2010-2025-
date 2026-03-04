@@ -1,4 +1,4 @@
-# EV-vs-Petrol-Vehicle-Market-Analysis-2010-2025-
+# EV-vs-Petrol-Vehicle-Market-Analysis-2010-2025
 The analysis is performed using Excel, SQL, and Power BI to explore trends in EV adoption, compare EV and petrol vehicle sales, and identify key factors influencing EV market growth.
 
 ## Objectives of the project
@@ -85,5 +85,77 @@ ORDER BY year;
 
 Analysis- This query calculates the total EV sales for each year to examine adoption trends over time. The results show a steady and significant increase in EV sales from 20,139 units in 2010 to 19,673,169 units in 2025, with 2025 recording the highest sales, indicating rapid global growth in EV adoption.
 
+### Query 8- Total Petrol and Diesel Sales
+
+SELECT 
+SUM(petrol_car_sales), SUM(diesel_car_sales)
+FROM ev_vs_petrol;
+
+Analysis- The query helped us identify the total sales of traditional vehicles in the dataset, with 927,967,539 petrol car sales and 169,124,260 diesel car sales, enabling a comparison with EV sales.
+
+### Query 9- Top 10 Countries by EV Sales
+
+SELECT country,
+SUM(ev_sales) AS total_ev_sales
+FROM ev_vs_petrol
+GROUP BY country
+ORDER BY total_ev_sales DESC
+LIMIT 10;
+
+Analysis- The query identified the top 10 countries with the highest EV sales, indicating the markets leading EV adoption. The results show that China dominates the EV market with 46,544,667 sales, far ahead of other countries.
+
+### Query 10- Charging Infrastructure by Country
+
+SELECT country,
+MAX(charging_stations) AS total_charging_stations
+FROM ev_vs_petrol
+GROUP BY country
+ORDER BY total_charging_stations DESC;
+
+Analysis- The query helped identify countries with the highest charging infrastructure, showing that China leads with 4,338,106 charging stations. A well-developed charging network plays a critical role in EV adoption, making electric vehicles more convenient and accessible for consumers.
+
+### Query 11- EV Growth Rate by Year
+
+SELECT year,
+ROUND(AVG(ev_growth_rate_yoy),2) AS avg_ev_growth_yoy
+FROM ev_vs_petrol
+GROUP BY year
+ORDER BY year;
+
+Analysis- The query calculates the year-over-year growth of EV sales, helping identify periods of rapid market expansion. The results show that the highest growth occurred in 2011 at 151.31%, indicating a major early surge in EV adoption as the market began expanding globally.
+
+### Relational Analysis Using SQL Joins
+Since the original dataset exists as a single table, additional tables were created by logically separating the data into smaller tables. This allows the use of SQL joins to demonstrate relational database analysis and to examine relationships between vehicle sales, country information, and charging infrastructure.
+
+Country Information Table
+CREATE TABLE country_info AS
+SELECT DISTINCT
+country,
+region,
+gdp_per_capita,
+urban_population_percent
+FROM ev_vs_petrol;
+
+Vehicle Sales Table
+CREATE TABLE vehicle_sales AS
+SELECT
+country,
+year,
+ev_sales,
+petrol_car_sales,
+diesel_car_sales,
+total_vehicle_sales,
+ev_market_share
+FROM ev_vs_petrol;
+
+Charging Infrastructure Table
+CREATE TABLE infrastructure AS
+SELECT
+country,
+year,
+charging_stations,
+fast_chargers_share,
+avg_ev_range_km
+FROM ev_vs_petrol;
 
 
