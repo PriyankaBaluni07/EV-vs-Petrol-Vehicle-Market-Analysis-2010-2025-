@@ -132,8 +132,6 @@ CREATE TABLE country_info AS
 SELECT DISTINCT
 country,
 region,
-gdp_per_capita,
-urban_population_percent
 FROM ev_vs_petrol;
 
 ### Vehicle Sales Table
@@ -145,17 +143,26 @@ ev_sales,
 petrol_car_sales,
 diesel_car_sales,
 total_vehicle_sales,
-ev_market_share
 FROM ev_vs_petrol;
 
-### Charging Infrastructure Table
-CREATE TABLE infrastructure AS
-SELECT
-country,
-year,
-charging_stations,
-fast_chargers_share,
-avg_ev_range_km
-FROM ev_vs_petrol;
+### LEFT JOIN Analysis – Regional EV Sales Performance
+
+SELECT 
+c.country,
+c.region,
+v.year,
+v.ev_sales,
+v.total_vehicle_sales,
+ROUND((v.ev_sales / v.total_vehicle_sales) * 100, 2) AS ev_sales_percentage
+FROM country_info c
+LEFT JOIN vehicle_sales v
+ON c.country = v.country
+ORDER BY ev_sales_percentage desc;
+
+Analysis- This analysis links country-level information with yearly vehicle sales data to examine EV adoption across regions. The calculated column `ev_sales_percentage` represents the share of electric vehicles in total vehicle sales for each country. Results are ordered by this percentage to highlight markets with stronger EV adoption, where Norway consistently ranks among the top countries, indicating its leading role in the transition toward electric mobility.
+
+### INNER JOIN Analysis – EV Sales with Regional Information
+
+
 
 
