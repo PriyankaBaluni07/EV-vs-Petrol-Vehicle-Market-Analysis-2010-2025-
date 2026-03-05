@@ -190,6 +190,17 @@ ORDER BY avg_subsidy DESC;
 
 Analysis- This query evaluates government incentives for EV adoption by calculating the average subsidy offered by each country along with their total EV sales. The results show that the United States, China, and France offer the highest EV subsidies, and these countries also record the highest EV sales, indicating a possible correlation between government incentives and increased EV adoption.
 
-### Query 17- 
+### Query 17- EV Sales Ranking Within Each Region
+
+SELECT 
+region,
+country,
+SUM(ev_sales) AS total_ev_sales,
+DENSE_RANK() OVER(PARTITION BY region ORDER BY SUM(ev_sales) DESC) AS regional_rank
+FROM ev_vs_petrol
+GROUP BY region, country
+ORDER BY region, regional_rank;
+
+Analysis- 
 
 
