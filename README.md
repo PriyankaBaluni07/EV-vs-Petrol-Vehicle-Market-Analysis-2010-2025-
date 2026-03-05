@@ -18,6 +18,21 @@ The dataset includes 1200 rows and 22 columns representing EV and traditional ve
 
 ### Key Columns
 
+1) Country- The column represents the country where the vehicle sales were recorded, allowing analysis of EV adoption patterns across different national markets.
+   
+2) Region- The column represents region to which a country belongs (e.g., Europe, Asia, North America), allowing comparison of EV adoption trends across regions.
+
+3) Year- The column represents the year in which vehicle sales and related metrics were recorded, enabling analysis of electric vehicle market trends over time from 2010 to 2025.
+   
+4) ev_sales- The total number of electric vehicles sold in a specific country and year. This column is a key metric for measuring EV market growth.
+   
+5) ev_market_share- The percentage of EV sales relative to total vehicle sales in a given country and year, indicating the level of EV adoption.
+   
+6) charging_stations- The number of EV charging stations available in a country during a given year. Charging infrastructure is a major factor that positively influences the adoption of electric vehicles.
+   
+7) gdp_per_capita- The column represents average economic output per person in a country. It provides insight into the economic conditions that may affect EV adoption and purchasing power.
+
+8) ev_subsidy_usd- The amount of government financial incentive provided for purchasing electric vehicles, measured in US dollars. This variable helps analyze how policy support and subsidies influence EV adoption across different nations.
 
 ## Database Setup
 Step 1: Create Database
@@ -204,6 +219,15 @@ FROM ev_vs_petrol
 GROUP BY region, country
 ORDER BY region, regional_rank;
 
-Analysis- 
+Analysis- This query ranks countries by total EV sales within each region using the `DENSE_RANK()` window function. By partitioning the data by region, the ranking resets for each region, allowing comparison of EV sales performance among countries within the same geographic area. The results show that China ranks first in the APAC region and also leads overall EV sales, highlighting its dominant position in the global electric vehicle market.
+
+## Conclusion
+
+The SQL analysis involved importing, cleaning, and exploring the ev_vs_petrol vehicle dataset to examine sales trends, compare country performance, and identify patterns in EV adoption. The results show a strong rise in global EV sales, increasing from 20,139 units in 2010 to 19,673,169 units in 2025, with 2025 recording the highest sales. The largest year-over-year growth occurred in 2011 at 151.31%, marking an early surge in EV adoption.
+
+Country-level analysis shows that China dominates the EV market with 46,544,667 total sales, ranking first in the APAC region and globally. China also leads in charging infrastructure with 4,338,106 charging stations, indicating strong support for EV adoption. Additionally, the United States, China, and France offer the highest EV subsidies and also record some of the highest EV sales, suggesting a link between government incentives and EV adoption.
+
+Overall, the findings highlight the important role of government policies, charging infrastructure, and market expansion in accelerating EV adoption, with China emerging as the global leader. Further analysis and visualization will be conducted using Excel and Power BI to gain deeper insights into EV market trends.
+
 
 
