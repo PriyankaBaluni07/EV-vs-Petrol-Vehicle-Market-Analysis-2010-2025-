@@ -127,14 +127,14 @@ Analysis- The query calculates the year-over-year growth of EV sales, helping id
 ### Relational Analysis Using SQL Joins
 Since the original dataset exists as a single table, additional tables were created by logically separating the data into smaller tables. This allows the use of SQL joins to demonstrate relational database analysis and to examine relationships between vehicle sales, country information, and charging infrastructure.
 
-### Country Information Table
+### Query 12- Country Information Table
 CREATE TABLE country_info AS
 SELECT DISTINCT
 country,
 region,
 FROM ev_vs_petrol;
 
-### Vehicle Sales Table
+###   Query 13- Vehicle Sales Table
 CREATE TABLE vehicle_sales AS
 SELECT
 country,
@@ -145,7 +145,7 @@ diesel_car_sales,
 total_vehicle_sales,
 FROM ev_vs_petrol;
 
-### LEFT JOIN Analysis – Regional EV Sales Performance
+### Query 14- LEFT JOIN Analysis – Regional EV Sales Performance
 
 SELECT 
 c.country,
@@ -159,10 +159,37 @@ LEFT JOIN vehicle_sales v
 ON c.country = v.country
 ORDER BY ev_sales_percentage desc;
 
-Analysis- This analysis links country-level information with yearly vehicle sales data to examine EV adoption across regions. The calculated column `ev_sales_percentage` represents the share of electric vehicles in total vehicle sales for each country. Results are ordered by this percentage to highlight markets with stronger EV adoption, where Norway consistently ranks among the top countries, indicating its leading role in the transition toward electric mobility.
+Analysis- This analysis links country-level information with yearly vehicle sales data to examine EV adoption across regions. The calculated column ev_sales_percentage represents the share of electric vehicles in total vehicle sales for each country. Results are ordered by this percentage to highlight markets with stronger EV adoption, where Norway consistently ranks among the top countries, indicating its leading role in the transition toward electric mobility.
 
-### INNER JOIN Analysis – EV Sales with Regional Information
+### Query 15- SELF JOIN Analysis – Comparing EV Sales Between Countries in the Same Year
 
+SELECT 
+a.year,
+a.country AS country_1,
+b.country AS country_2,
+a.ev_sales AS country_1_ev_sales,
+b.ev_sales AS country_2_ev_sales,
+(a.ev_sales - b.ev_sales) AS sales_difference
+FROM ev_vs_petrol a
+JOIN ev_vs_petrol b
+ON a.year = b.year
+AND a.country < b.country
+ORDER BY a.year, sales_difference DESC;
 
+Analysis- This analysis applies a self join on the ev_vs_petrol table to compare EV sales between countries in the same year. Since each row contains data for only one country-year combination, joining the table with itself enables direct comparison of EV sales across countries for that year. The calculated sales difference highlights variations in EV adoption and helps identify markets with stronger EV sales performance.
+
+### Query 16- Impact of Subsidies on EV Sales
+
+SELECT 
+country,
+AVG(ev_subsidy_usd) AS avg_subsidy,
+SUM(ev_sales) AS total_ev_sales
+FROM ev_vs_petrol
+GROUP BY country
+ORDER BY avg_subsidy DESC;
+
+Analysis- This query evaluates government incentives for EV adoption by calculating the average subsidy offered by each country along with their total EV sales. The results show that the United States, China, and France offer the highest EV subsidies, and these countries also record the highest EV sales, indicating a possible correlation between government incentives and increased EV adoption.
+
+### Query 17- 
 
 
