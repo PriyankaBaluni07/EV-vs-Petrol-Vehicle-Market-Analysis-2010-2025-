@@ -16,6 +16,9 @@ The analysis is performed using Excel, SQL, and Power BI to explore trends in EV
 
 The dataset includes 1200 rows and 22 columns representing EV and traditional vehicle sales across countries and years.
 
+### Key Columns
+
+
 ## Database Setup
 Step 1: Create Database
 CREATE DATABASE electric_vehicles;
