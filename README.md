@@ -229,5 +229,11 @@ Country-level analysis shows that China dominates the EV market with 46,544,667 
 
 Overall, the findings highlight the important role of government policies, charging infrastructure, and market expansion in accelerating EV adoption, with China emerging as the global leader. Further analysis and visualization will be conducted using Excel and Power BI to gain deeper insights into EV market trends.
 
+## Excel Analysis and Visualization
+
+After deriving key insights from the SQL analysis, the project transitions to Microsoft Excel to further explore the dataset through data cleaning, pivot table analysis, and visualizations. While SQL was used to explore the dataset and derive key insights through queries, Excel provides tools to summarize and visualize these findings for easier interpretation. In this stage, the dataset is first prepared through basic data cleaning and validation, followed by the use of pivot tables and charts to summarize key metrics. The analysis focuses on visualizing EV sales trends over time, comparing country and regional performance, and examining patterns in EV adoption, providing clearer insights before progressing to the final Power BI dashboard for interactive visualization.
+
+### Data Cleaning in Excel
+
 
 
