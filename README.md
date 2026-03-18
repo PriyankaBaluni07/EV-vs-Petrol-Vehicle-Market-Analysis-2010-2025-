@@ -233,7 +233,7 @@ Overall, the findings highlight the important role of government policies, charg
 
 After completing data cleaning and initial analysis in SQL, the project now moves to Excel for deeper analysis. Initial insights were derived in SQL using aggregation and filtering queries to understand basic trends and distributions. In the next stage, Excel is used to perform detailed analytical operations such as time-series analysis, country-wise comparisons, cost evaluation, and environmental impact assessment using formulas and structured data exploration. This step focuses on generating meaningful insights from the dataset, which are further extended into Power BI for building interactive dashboards and visualizing the results effectively.
 
-### Data Cleaning in Excel
+### Data Preparation
 The following data preparation steps are performed in Excel to ensure data quality and consistency:
 
 1) Converted raw data into a structured table for efficient data handling, filtering, and structured references.
@@ -246,4 +246,216 @@ The following data preparation steps are performed in Excel to ensure data quali
 
 5) Validated data formats (dates, numbers, text, currency) to ensure consistency and reliable analysis.
 
+### Derived Metrics
+
+EV Share %
+EV Share % = EV Sales / (EV Sales + ICE Sales)
+→ Measures EV adoption rate
+
+Cost Metrics
+→ Cost per km and total ownership cost for EV vs Petrol
+
+CO₂ Reduction
+→ Difference between petrol and EV emissions
+
+Break-even Years
+→ Time required for EV to become cost-effective
+
+### Global EV Trend Analysis
+
+## Objective
+Analyze the growth of Electric Vehicle (EV) adoption globally over the period 2010–2025, with the aim of identifying long-term trends, growth patterns, and key inflection points in the market.
+
+## Analysis
+
+Aggregated year-wise EV sales to observe overall growth in adoption
+
+Evaluated year-over-year changes to understand how rapidly the market is expanding
+
+Analyzed EV share (%) over time to measure the proportion of EVs relative to total vehicle sales
+
+Identified trend patterns (linear vs exponential growth) to understand the nature of market expansion
+
+Compared early-stage adoption (2010–2015) with later stages (post-2020) to highlight acceleration in growth
+
+## Key Insight
+
+EV adoption remains relatively low and gradual in the early years (2010–2015)
+
+A noticeable increase in growth rate begins around 2016–2018
+
+Post-2020, EV adoption experiences exponential growth, indicating rapid market expansion
+
+This surge suggests the combined impact of government policies, technological advancements, and increased consumer awareness
+
+### Country-wise Analysis
+
+## Objective
+Compare EV adoption across different countries to identify market leaders, emerging regions, and variations in adoption patterns. This analysis helps understand how geographical, economic, and policy factors influence EV growth.
+
+## Analysis
+Performed country-level aggregation of EV sales to compare overall adoption volume
+
+Evaluated market share of EVs within each country to understand penetration levels
+
+Compared high-volume vs high-penetration markets to distinguish between scale and adoption intensity
+
+Analyzed growth trends across countries to identify consistent performers and rapidly growing markets
+
+Assessed regional differences to highlight how adoption varies across developed and developing economies
+
+## Key Insights
+Norway leads in EV adoption in terms of market penetration, indicating strong policy support and consumer acceptance
+
+China dominates in total EV sales volume, driven by its large market size and manufacturing capabilities
+
+United States shows steady and consistent growth, reflecting gradual but stable adoption
+
+Significant variation exists across countries, suggesting that government incentives, infrastructure availability, and economic factors play a crucial role in EV adoption
+
+### Cost Analysis (EV vs Petrol)
+
+## Objective
+Evaluate the financial viability of Electric Vehicles (EVs) compared to petrol vehicles by analyzing both short-term and long-term cost factors. The goal is to determine whether EVs provide economic benefits over time despite higher initial investment.
+
+## Analysis
+
+Compared cost per kilometer between EV and petrol vehicles to understand day-to-day running expenses
+
+Evaluated total cost of ownership (TCO), including purchase cost, fuel/electricity cost, and operational expenses
+
+Analyzed the difference between upfront cost and long-term savings to understand cost recovery potential
+
+Assessed how cost efficiency varies across different countries based on fuel prices and economic conditions
+
+Identified the role of recurring savings (fuel vs electricity) in reducing overall ownership cost
+
+## Key Insights
+
+EVs have a lower running cost per kilometer, making them more economical for daily usage
+
+Despite higher initial purchase cost, EVs become more cost-efficient in the long term due to lower fuel and maintenance expenses
+
+The cost advantage increases over time, especially with higher vehicle usage
+
+However, the high upfront cost remains a major barrier to adoption, particularly in price-sensitive markets
+
+Long-term savings make EVs a financially viable option, especially in regions with high fuel prices
+
+### Environmental Impact Analysis
+
+## Objective
+Assess the environmental sustainability benefits of Electric Vehicle (EV) adoption by comparing emissions with petrol vehicles. The aim is to understand how EVs contribute to reducing carbon footprint and supporting cleaner transportation.
+
+## Analysis
+
+Compared CO₂ emissions generated by petrol vehicles vs EVs to evaluate environmental impact
+
+Estimated CO₂ reduction achieved through EV adoption by calculating the difference in emissions
+
+Analyzed how emission savings vary across countries and years based on adoption levels
+
+Evaluated the relationship between increasing EV adoption and overall emission reduction trends
+
+Considered the broader impact of EV growth on sustainable and eco-friendly mobility
+
+
+## Key Insights
+
+EVs contribute to a significant reduction in carbon emissions compared to petrol vehicles
+
+Higher EV adoption directly leads to greater CO₂ reduction over time
+
+The environmental impact varies across regions, depending on factors such as energy sources and adoption rates
+
+Countries with higher EV penetration demonstrate stronger sustainability outcomes
+
+EV adoption plays a crucial role in supporting long-term environmental and climate goals
+
+
+### Segment Analysis
+
+## Objective
+Understand how EV adoption varies across different vehicle segments to identify which segments drive early adoption and how the transition spreads across the market over time.
+
+## Analysis
+
+Performed segment-wise comparison of EV adoption across categories such as Passenger, Commercial, and Premium vehicles
+
+Evaluated EV share within each segment to understand penetration levels
+
+Analyzed adoption patterns across segments over time to identify early adopters and late movers
+
+Compared growth trends between high-end and mass-market segments
+
+Assessed how consumer behavior and pricing sensitivity influence adoption in each segment
+
+## Key Insight
+
+The Premium segment shows early adoption of EVs, driven by higher purchasing power and quicker acceptance of new technology
+
+The Passenger (mass-market) segment experiences adoption at a later stage as EVs become more affordable and accessible
+
+The Commercial segment adoption depends on cost efficiency and operational benefits, showing gradual growth
+
+EV adoption typically follows a pattern where it starts in high-end segments and gradually expands to the mass market
+
+Segment-wise differences highlight the impact of pricing, usage patterns, and consumer preferences on EV adoption
+
+
+### Infrastructure Analysis
+
+## Objective
+Evaluate the readiness and availability of charging infrastructure to support the growing adoption of Electric Vehicles (EVs). This analysis aims to understand whether infrastructure development is keeping pace with EV growth and how it influences adoption.
+
+## Analysis
+
+Analyzed the growth in number of charging stations over time to track infrastructure expansion
+
+Calculated chargers per 1000 EVs to measure infrastructure adequacy relative to EV adoption
+
+Compared infrastructure availability across countries and regions to identify gaps and leading markets
+
+Examined the relationship between charging infrastructure and EV adoption rates
+
+Identified trends indicating whether infrastructure growth is proactive or reactive to EV demand
+
+## Key Insight
+
+Availability of charging infrastructure is a critical factor influencing EV adoption
+
+Regions with better infrastructure show higher EV penetration and faster growth
+
+In the early stages, limited charging availability acts as a barrier (range anxiety)
+
+Over time, infrastructure expansion helps accelerate EV adoption
+
+The balance between EV growth and infrastructure development is essential for sustainable market expansion
+
+## Break-even Analysis
+
+## Objective
+Determine the cost recovery period for Electric Vehicles (EVs) by identifying how long it takes for the initial higher investment in EVs to be offset by savings from lower running and maintenance costs. This helps evaluate the practical financial feasibility of EV adoption.
+
+## Analysis
+Calculated break-even years based on the difference between upfront cost and annual savings from fuel and maintenance
+
+Categorized break-even periods into ranges (e.g., <5 years, 6–10 years, >10 years) to simplify comparison
+
+Compared break-even timelines across countries and regions to identify variation in cost recovery
+
+Analyzed the impact of fuel prices, electricity costs, and usage patterns on payback period
+
+Assessed how external factors such as government incentives and subsidies influence break-even duration
+
+## Key Insight
+The break-even period varies significantly across countries, depending on economic and policy conditions
+
+Regions with higher fuel costs and strong subsidies tend to have a shorter payback period
+
+In some markets, EVs achieve cost recovery in less than 5 years, making them highly attractive
+
+In contrast, regions with lower fuel prices or limited incentives show longer break-even periods
+
+The break-even timeline is a critical decision-making factor influencing EV adoption at the consumer level
 
