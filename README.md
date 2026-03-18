@@ -1,4 +1,4 @@
-# EV-vs-Petrol-Vehicle-Market-Analysis-2010-2025
+# EV-vs-Petrol-Vehicle-Market-Analysis(2010-2025)
 The analysis is performed using Excel, SQL, and Power BI to explore trends in EV adoption, compare EV and petrol vehicle sales, and identify key factors influencing EV market growth.
 
 ## Objectives of the project
@@ -231,9 +231,19 @@ Overall, the findings highlight the important role of government policies, charg
 
 ## Excel Analysis and Visualization
 
-After deriving key insights from the SQL analysis, the project transitions to Microsoft Excel to further explore the dataset through data cleaning, pivot table analysis, and visualizations. While SQL was used to explore the dataset and derive key insights through queries, Excel provides tools to summarize and visualize these findings for easier interpretation. In this stage, the dataset is first prepared through basic data cleaning and validation, followed by the use of pivot tables and charts to summarize key metrics. The analysis focuses on visualizing EV sales trends over time, comparing country and regional performance, and examining patterns in EV adoption, providing clearer insights before progressing to the final Power BI dashboard for interactive visualization.
+After completing data cleaning and initial analysis in SQL, the project now moves to Excel for deeper analysis. Initial insights were derived in SQL using aggregation and filtering queries to understand basic trends and distributions. In the next stage, Excel is used to perform detailed analytical operations such as time-series analysis, country-wise comparisons, cost evaluation, and environmental impact assessment using formulas and structured data exploration. This step focuses on generating meaningful insights from the dataset, which are further extended into Power BI for building interactive dashboards and visualizing the results effectively.
 
 ### Data Cleaning in Excel
+The following data preparation steps are performed in Excel to ensure data quality and consistency:
 
+1) Converted raw data into a structured table for efficient data handling, filtering, and structured references.
+
+2) Checked for missing values to maintain completeness and avoid analytical errors.
+
+3) Removed duplicate records to ensure data accuracy and integrity.
+
+4) Applied freeze panes to improve navigation and maintain header visibility.
+
+5) Validated data formats (dates, numbers, text, currency) to ensure consistency and reliable analysis.
 
 
