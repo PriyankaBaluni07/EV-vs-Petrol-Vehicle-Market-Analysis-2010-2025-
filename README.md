@@ -251,7 +251,7 @@ The following data preparation steps are performed in Excel to ensure data quali
 ## 1. EV Cost Per Km
 Calculation: EV Cost per Km = Electricity Cost per Unit × Energy Consumption per Km
 
-## Purpose:
+### Purpose:
 1) Represents the running cost of an EV per kilometer
 2) Used to compare operating efficiency with petrol vehicles
 3) Helps determine day-to-day affordability of EVs
