@@ -302,33 +302,29 @@ Calculation: Petrol CO₂ per Km = CO₂ Emission per Liter / Mileage
 Calculation: CO₂ Saving per Km = Petrol CO₂ per Km – EV CO₂ per Km
 
 ### Purpose:
-1) Measures emission reduction achieved by switching to EV
-2) Core sustainability metric
-3) Used to estimate total environmental benefits
+1) This metric represents the amount of carbon emissions saved per kilometer by using an electric vehicle instead of a petrol vehicle.
+2) Serves as a core sustainability metric and helps estimate total environmental benefits over time.
 
 ## 8. Break-even Years
 Calculation: Break-even Years = (EV Purchase Cost – Petrol Vehicle Cost) / Annual Savings
 
 ### Purpose:
-1) Calculates the time required to recover higher EV cost
-2) Critical for investment decision-making
-3) Helps users understand long-term financial viability
+1) Break-even Years measures the time required to recover the higher upfront cost of an EV through annual savings, making it a key indicator of long-term cost efficiency.
+2) It is critical for investment decisions and helps users understand long-term financial viability.
 
 ## 9. ICE Sales
 Calculation: ICE Sales = Total Vehicle Sales – EV Sales
 
 ### Purpose:
-1) Represents internal combustion engine (petrol/diesel) vehicle sales
-2) Needed to compare EV vs traditional vehicle adoption
-3) Used in calculating EV share
-
+1) It represents conventional vehicle sales and is essential for comparing EV adoption with traditional internal combustion engine vehicles.
+2) Supports trend comparison between traditional and emerging technologies.
+   
 ## 10. EV Share (%)
 Calculation: EV Share % = (EV Sales / Total Vehicle Sales) × 100
 
 ### Purpose:
-1) Measures percentage of EVs in total vehicle sales
-2) Key indicator of EV adoption rate
-3) Widely used in trend and country-level analysis
+1) Helps analyze the shift from conventional (ICE) vehicles to EVs over time, indicating market transition trends.
+2) Determines overall market composition and regional adoption trends, highlighting regions with slower EV adoption.
 
 ## Global EV Trend Analysis
 
