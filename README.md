@@ -1,5 +1,5 @@
 # EV-vs-Petrol-Vehicle-Market-Analysis(2010-2025)
-The analysis is performed using Excel, SQL, and Power BI to explore trends in EV adoption, compare EV and petrol vehicle sales, and identify key factors influencing EV market growth.
+The analysis is carried out using SQL, Excel, and Power BI to examine trends in EV adoption over time, compare the sales performance of electric and petrol vehicles, and identify the key factors influencing the growth of the EV market. It also helps uncover patterns, regional differences, and insights that support a better understanding of the evolving automotive landscape.
 
 ## Objectives of the project
 1) Analyzing EV vs petrol vehicle sales trends across countries and years.
@@ -8,23 +8,23 @@ The analysis is performed using Excel, SQL, and Power BI to explore trends in EV
 
 3) Studying the role of charging infrastructure in EV market growth.
 
-4) Identifying countries and segments where EVs are becoming dominant.
+4) To examine how EV adoption, emission regulations, and transport-related CO₂ emissions are interconnected across countries over time.
 
-5) Building interactive dashboards in Power BI for visual insights.
+5) Identifying countries and segments where EVs are becoming dominant.
 
 ## Dataset Description
 
-The dataset includes 1200 rows and 22 columns representing EV and traditional vehicle sales across countries and years.
+The raw dataset contains 1,200 rows and roughly 22 columns, providing detailed information on EV and traditional vehicle sales across multiple countries and years.
 
-### Key Columns
+## Some of the Key Columns
 
-1) Country- The column represents the country where the vehicle sales were recorded, allowing analysis of EV adoption patterns across different national markets.
+1) Country- This column identifies the countries in which vehicle sales are recorded, enabling a comparative analysis of EV adoption trends across different national markets.
    
-2) Region- The column represents region to which a country belongs (e.g., Europe, Asia, North America), allowing comparison of EV adoption trends across regions.
+2) Region- This column represents the region each country belongs to (e.g., Europe, Asia, North America), enabling comparison of EV adoption trends across different regions.
 
 3) Year- The column represents the year in which vehicle sales and related metrics were recorded, enabling analysis of electric vehicle market trends over time from 2010 to 2025.
    
-4) ev_sales- The total number of electric vehicles sold in a specific country and year. This column is a key metric for measuring EV market growth.
+4) ev_sales- This column represents the total number of electric vehicles sold in a specific country and year, serving as a key metric for measuring EV market growth.
    
 5) ev_market_share- The percentage of EV sales relative to total vehicle sales in a given country and year, indicating the level of EV adoption.
    
@@ -45,7 +45,7 @@ Step 3: Import Dataset
 The dataset was imported using MySQL Workbench Table Data Import Wizard, which automatically created the table and loaded the CSV data.
 
 ## Dataset Source & Exploration
-The dataset for this project was downloaded from Kaggle in CSV format and contains country-level EV and petrol vehicle sales data from 2010–2025. The file was imported into MySQL Workbench using the Table Data Import Wizard, which automatically created the table and assigned column data types. Some column names were later shortened to make them more SQL-friendly for querying.
+The dataset for this project was sourced from Kaggle in CSV format and includes country-level data on EV and petrol vehicle sales from 2010 to 2025. It was imported into MySQL Workbench using the Table Data Import Wizard, which automatically generated the table and assigned appropriate data types to each column.
 
 After importing the dataset into MySQL, initial data exploration was performed to understand the structure and contents of the data. Basic SQL queries were used to preview the dataset, check the number of records, identifying column names, and examine the range of years available. This helped ensure that the dataset was correctly imported and provided a better understanding of the variables before performing further analysis.
 
