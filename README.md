@@ -235,6 +235,26 @@ Overall, the findings highlight the important role of government policies, charg
 
 After completing data cleaning and initial analysis in SQL, the project now moves to Excel for deeper analysis. Initial insights were derived in SQL using aggregation and filtering queries to understand basic trends and distributions. In the next stage, Excel is used to perform detailed analytical operations such as time-series analysis, country-wise comparisons, cost evaluation, and environmental impact assessment using formulas and structured data exploration. This step focuses on generating meaningful insights from the dataset, which are further extended into Power BI for building interactive dashboards and visualizing the results effectively.
 
+## Sheets Description
+
+**Raw Data**
+Contains the primary dataset with variables related to EV sales, charging infrastructure, emissions, and market trends. It serves as the foundation for all analysis.
+
+**Global EV Trend**
+Analyzes EV growth over time, highlighting trends in sales, market share, infrastructure, and technological advancements.
+
+**Environment**
+Examines the relationship between EV adoption, emission regulations, and transport-related CO₂ emissions across countries.
+
+**Segment Analysis**
+Explores EV adoption across different segments (Commercial, Mass Market, Premium) and compares variations in sales, growth, and technology.
+
+**Infrastructure**
+Focuses on EV charging infrastructure growth and evaluates whether it is keeping pace with increasing EV adoption.
+
+**Pivot Table**
+Provides a summarized view of EV sales, infrastructure, and subsidies across regions for easy comparison and insights.
+
 ### Data Preparation
 The following data preparation steps are performed in Excel to ensure data quality and consistency:
 
@@ -255,15 +275,16 @@ This dataset analyzes the growth of electric vehicles (EVs) compared to traditio
 
 ### Key Columns
 
-1) Year – Time period of analysis
-2) EV_Sales – Total EVs sold
-3) Petrol_Car_Sales & Diesel_Car_Sales – Traditional vehicle sales
-4) All_Vehicle_Sales – Total vehicle market size
-5) EV_Market_Share_% – EV share in total sales
-6) Charging_Stations – EV infrastructure growth
-7) Avg_EV_Range_KM – Improvement in EV technology
-8) EV_Growth_YoY_% – Annual growth rate of EV sales
-9) ICE_Sales – (Calculated) Petrol + Diesel sales
+1) **Year–** Time period of analysis.
+2) **EV_Sales–** Total EVs sold.
+3) **Petrol_Car_Sales–** Total sales of petrol cars.
+4) **Diesel_Car_Sales-** Total sales of diesel cars.
+5) **Total_Vehicle_Sales–** Total vehicle market size.
+6) **Avg_EV_Market_Share_Pct–** EV share in total sales.
+7) **Charging_Stations–** EV infrastructure growth.
+8) **Avg_EV_Range_KM–** Average distance an EV can travel on a full charge.
+9) **EV_Growth_YoY_Pct–** Annual growth rate of EV sales.
+10) **ICE_Sales–** **(Calculated column)** Internal Combustion Engine is the aggregation of Petrol and diesel car sales.
 
 ### Key Insights
 
@@ -282,20 +303,20 @@ To analyze the relationship between EV adoption, emission regulations, and trans
 
 ### Key Columns
 
-1) Country, Region, Year – Geographic and time-based analysis
-2) CO2_Transport_MT – Total transport emissions (in million tonnes)
-3) Emission_Regulation_Score – Strength of environmental policies
-4) EV_Market_Share_Pct – EV penetration in total vehicle sales
-5) EV_Sales – Total EV adoption volume
+1) **Country, Region, Year–** Geographic and time-based analysis.
+2) **CO2_Transport_MT–** Total transport emissions (in million tonnes).
+3) **Emission_Regulation_Score–** Measures how strict a country’s emission regulations are.
+4) **EV_Market_Share_Pct–** EV penetration in total vehicle sales.
+5) **EV_Sales–** Total EV adoption volume.
 
 ### Key Insights
 
-1) EV adoption has increased significantly across all countries, especially after 2020
-2) Countries with strong emission regulations tend to have higher EV market share (e.g., Norway, Netherlands)
-3) High EV adoption correlates with declining transport emissions in developed countries
-4) Emerging economies show rising emissions despite EV growth due to lower adoption levels
-5) China leads in EV scale, helping stabilize emissions despite large transport demand
-6) The US shows slower emission reduction, indicating EV growth alone is not sufficient without stronger policies
+1) EV adoption has increased significantly across all countries, especially after 2020.
+2) Countries with strong emission regulations tend to have higher EV market share (e.g., Norway, Netherlands).
+3) High EV adoption correlates with declining transport emissions in developed countries.
+4) Emerging economies show rising emissions despite EV growth due to lower adoption levels.
+5) China leads in EV scale, helping stabilize emissions despite large transport demand.
+6) The US shows slower emission reduction, indicating EV growth alone is not sufficient without stronger policies.
 
 ## Segment Analysis
 
@@ -304,46 +325,37 @@ To analyze EV adoption across different market segments (Commercial, Mass Market
 
 ### Key Columns
 
-1) Vehicle_Segment – Type of EV market (Commercial, Mass, Premium)
-2) Year – Time period of analysis
-3) EV_Sales – EV sales per segment
-4) ICE_Sales – Traditional vehicle sales for comparison
-5) Total_Sales – Overall vehicle sales
-6) EV_Market_Share_% – EV penetration within each segment
-7) Avg_EV_Range_KM – Technology improvement across segments
-8) EV_Growth_YoY_% – Segment-wise growth trends
-9) Avg_Charging_Stations – Represents the average availability of charging infrastructure, indicating overall infrastructure growth supporting EV adoption.
-Calculation- SUM(Charging_Stations) / Vehicle Segment
-11) Share_of_Segment_% – Shows the contribution of each vehicle segment to total EV sales.
-Calculation= Segment EV Sales / Total EV Sales * 100
-    
-### Key Insight
+1) **Vehicle_Segment–** Type of EV market (Commercial, Mass, Premium).
+2) **Year–** Time period of analysis.
+3) **EV_Sales–** EV sales per segment.
+4) **ICE_Sales–** Traditional vehicle sales for comparison.
+5) **Total_Sales–** Overall vehicle sales.
+6) **Avg_EV_Market_Share_Pct–** EV penetration within each segment.
+7) **Avg_EV_Range_KM–** Reflects EV range improvements across segments.
+8) **EV_Growth_YoY_Pct–** Segment-wise growth trends.
+9) **Avg_Charging_Stations–** Represents the average availability of charging infrastructure, indicating overall infrastructure growth.
+**(Calculated Column)-** SUM(Charging_Stations) / Vehicle Segment
 
-1) Mass Market EV sales grew from 11,849 (2010) to 11,688,453 (2025) → highest contributor to total EV adoption (23.71% share)
-   
-2) Premium segment has the highest EV penetration, rising from 0.05% (2010) to 34.26% (2025) → fastest adoption rate
-   
-3) Commercial segment shows slowest EV adoption, with share increasing only from 0.01% to 8.33% (2010–2025)
-   
-4) EV sales surged significantly post-2020:
-   Mass Market: 1.77M → 11.68M (2020–2025)
-   Premium: 1.06M → 6.96M
-   Commercial: 154K → 1.01M
+10) **EV_Share_of_Segment_Pct–** Shows the contribution of each vehicle segment to total EV sales.
+**(Calculated Column)-** Segment EV Sales / Total EV Sales * 100
+    
+### Key Insights
 
-5) YoY growth peaked around 2021 (~110%) across segments and declined to ~21–22% by 2025 → indicates market maturity
+1) Mass Market EV sales grew from 11,849 (2010) to 11,688,453 (2025) → highest contributor to total EV adoption (23.71% share).
+   
+2) Premium segment has the highest EV penetration, rising from 0.05% (2010) to 34.26% (2025) → fastest adoption rate.
+   
+3) Commercial segment shows slowest EV adoption, with share increasing only from 0.01% to 8.33% (2010–2025).
+
+4) YoY growth peaked around 2021 (~110%) across segments and declined to ~21–22% by 2025 → indicates market maturity.
     
-6) Charging stations expanded from 148 (2010) to 236,994 (2025) → strong infrastructure support for EV growth
+5) Charging stations expanded from 148 (2010) to 236,994 (2025) → strong infrastructure support for EV growth.
     
-7) Average EV range improved from 120 km to 471 km → ~4x increase in battery efficiency
+6) Average EV range improved from 120 km to 471 km → ~4x increase in battery efficiency.
     
-8) ICE vehicles still lead in volume but gap is narrowing:
+7) ICE vehicles still lead in volume but gap is narrowing:
    Mass Market (2025): 37.6M ICE vs 11.68M EV
    Premium (2025): 13.36M ICE vs 6.96M EV
-
-9) Clear adoption pattern:
-    Premium → fastest adoption (34.26%)
-   Mass Market → largest volume (11.68M sales)
-   Commercial → slowest transition (8.33%)
 
 ## Infrastructure Analysis
 
@@ -352,40 +364,40 @@ To analyze the growth of EV charging infrastructure across countries and underst
 
 ### Key Columns
 
-1) Country, Region, Year – Geographic and time-based analysis
-2) Charging_Stations – Total EV charging infrastructure
-3) Fast_Charger_Share_Pct – Share of fast chargers
-4) EV_Sales – EV adoption level
-5) Chargers_per_1000_EVs – Measures charging infrastructure adequacy by showing chargers available per 1000 EVs.
-   Calulation= Charging_Stations / EV_Sales * 1000
+1) **Country, Region, Year–** Geographic and time-based analysis.
+2) **Charging_Stations–** Total EV charging infrastructure.
+3) **Fast_Charger_Share_Pct–** Share of fast chargers.
+4) **EV_Sales–** Indicates total sales of ev thereby showcasing EV adoption level.
+5) **Chargers_per_1000_EVs–** Measures charging infrastructure adequacy by showing chargers available per 1000 EVs.
+   **(Calculated Column)-** Charging_Stations / EV_Sales * 1000
    
-6) Avg_EV_Range_KM – Technological improvement
-7) Urban_Population_Pct & GDP_per_Capita – Demand and economic indicators
+6) **Avg_EV_Range_KM–** Average distance an EV can travel on a full charge.
+7) **Urban_Population_Pct & GDP_per_Capita–** Both are demand and economic indicators.
 
 ### Key Insights
 
-1) Charging infrastructure grew massively across countries
+1) Charging infrastructure grew massively across countries.
    Example: China (530 → 4.33M), US (500 → 131K), Australia (0 → 13K) (2010–2025)
    
-2) Fast charger share increased significantly
+2) Fast charger share increased significantly.
    Example: China (9.9% → 49.3%), Australia (0% → 31.2%), UK (3% → 34.5%)
    
-3) Strong link between EV sales and infrastructure
+3) Strong link between EV sales and infrastructure.
    China EV sales: 1.8K → 12.9M, chargers: 530 → 4.33M
    US EV sales: 12.9K → 2.06M, chargers: 500 → 131K
    
-4) Chargers per 1000 EVs decline over time
+4) Chargers per 1000 EVs decline over time.
    Example: Australia 477 → 87, Austria 1536 → 429
 
-5) EV growth is faster than infrastructure expansion
+5) EV growth is faster than infrastructure expansion.
 
-6) EV range improved consistently across all countries
+6) EV range improved consistently across all countries.
    From ~120 km to ~480–500 km (global trend)
 
-7) Developed countries lead in infrastructure
+7) Developed countries lead in infrastructure.
    Norway, Netherlands, Switzerland show high charger density (1000+ per 1000 EVs in early years)
 
-8) Emerging economies show rapid growth but lower base
+8) Emerging economies show rapid growth but lower base.
    India: 0 → 34K chargers, EV sales: 136 → 181K
    Brazil: 0 → 16.5K chargers, EV sales: 30 → 103K
 
@@ -393,25 +405,25 @@ To analyze the growth of EV charging infrastructure across countries and underst
 The last sheet presents a summarized view of EV sales, charging infrastructure, and EV subsidies across regions using an Excel Pivot Table. The data is aggregated at the regional level to provide a clear comparison of EV adoption and supporting infrastructure.
 
 ### Analysis Approach
-1) Created a Pivot Table using the raw dataset
-2) Grouped data by Region
+1) Created a Pivot Table using the raw dataset.
+2) Grouped data by Region.
 3) Calculated the following fields-
    Total EV Sales
    Total Charging Stations
    Total EV Subsidy (USD)
-4) Added a Year slicer to filter data dynamically
+4) Added a Year slicer to filter data dynamically.
 
 ### Why Pivot Table Was Used
-1) To quickly aggregate large datasets into meaningful summaries
-2) To enable easy comparison across regions
-3) To perform quick validation of trends before building the Power BI dashboard
-4) To keep analysis simple and structured without heavy visualization
-
+1) To quickly aggregate large datasets into meaningful summaries.
+2) To enable easy comparison across regions.
+3) To keep analysis simple and structured without heavy visualization.
+4) To perform quick validation of trends before building the Power BI dashboard.
+   
 ### Key Insights
-1) APAC leads in EV adoption, with ~49.7M EV sales, driven mainly by China
-2) Europe shows strong infrastructure support, with ~1.31M charging stations
-3) North America has high EV adoption but relatively lower infrastructure density
-4) Oceania and South America are still emerging markets with lower EV adoption and infrastructure
-5) EV subsidies are highest in APAC and Europe, indicating strong government support
+1) APAC leads in EV adoption, with ~49.7M EV sales, driven mainly by China.
+2) Europe shows strong infrastructure support, with ~1.31M charging stations.
+3) North America has high EV adoption but relatively lower infrastructure density.
+4) Oceania and South America are still emerging markets with lower EV adoption and infrastructure.
+5) EV subsidies are highest in APAC and Europe, indicating strong government support.
 
 
