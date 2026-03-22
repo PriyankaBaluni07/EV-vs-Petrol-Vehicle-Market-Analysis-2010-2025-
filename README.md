@@ -146,6 +146,7 @@ Analysis- The query calculates the year-over-year growth of EV sales, helping id
 Since the original dataset exists as a single table, additional tables were created by logically separating the data into smaller tables. This allows the use of SQL joins to demonstrate relational database analysis and to examine relationships between vehicle sales, country information, and charging infrastructure.
 
 ### Query 12- Country Information Table
+
 CREATE TABLE country_info AS
 SELECT DISTINCT
 country,
@@ -153,6 +154,7 @@ region,
 FROM ev_vs_petrol;
 
 ###   Query 13- Vehicle Sales Table
+
 CREATE TABLE vehicle_sales AS
 SELECT
 country,
