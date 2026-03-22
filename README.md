@@ -227,7 +227,7 @@ The SQL analysis involved importing, cleaning, and exploring the ev_vs_petrol ve
 
 Country-level analysis shows that China dominates the EV market with 46,544,667 total sales, ranking first in the APAC region and globally. China also leads in charging infrastructure with 4,338,106 charging stations, indicating strong support for EV adoption. Additionally, the United States, China, and France offer the highest EV subsidies and also record some of the highest EV sales, suggesting a link between government incentives and EV adoption.
 
-Overall, the findings highlight the important role of government policies, charging infrastructure, and market expansion in accelerating EV adoption, with China emerging as the global leader. Further analysis and visualization will be conducted using Excel and Power BI to gain deeper insights into EV market trends.
+Overall, the findings highlight the important role of government policies, charging infrastructure, and market expansion in accelerating EV adoption, with China emerging as the global leader. Further analysis and visualization is conducted using Excel and Power BI to gain deeper insights into EV market trends.
 
 ## Excel Analysis and Visualization
 
