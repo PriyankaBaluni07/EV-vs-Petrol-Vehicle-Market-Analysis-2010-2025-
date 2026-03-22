@@ -342,17 +342,11 @@ To analyze EV adoption across different market segments (Commercial, Mass Market
 ### Key Insights
 
 1) Mass Market EV sales grew from 11,849 (2010) to 11,688,453 (2025) → highest contributor to total EV adoption (23.71% share).
-   
 2) Premium segment has the highest EV penetration, rising from 0.05% (2010) to 34.26% (2025) → fastest adoption rate.
-   
 3) Commercial segment shows slowest EV adoption, with share increasing only from 0.01% to 8.33% (2010–2025).
-
 4) YoY growth peaked around 2021 (~110%) across segments and declined to ~21–22% by 2025 → indicates market maturity.
-    
 5) Charging stations expanded from 148 (2010) to 236,994 (2025) → strong infrastructure support for EV growth.
-    
 6) Average EV range improved from 120 km to 471 km → ~4x increase in battery efficiency.
-    
 7) ICE vehicles still lead in volume but gap is narrowing:
    Mass Market (2025): 37.6M ICE vs 11.68M EV
    Premium (2025): 13.36M ICE vs 6.96M EV
@@ -378,25 +372,18 @@ To analyze the growth of EV charging infrastructure across countries and underst
 
 1) Charging infrastructure grew massively across countries.
    Example: China (530 → 4.33M), US (500 → 131K), Australia (0 → 13K) (2010–2025)
-   
 2) Fast charger share increased significantly.
    Example: China (9.9% → 49.3%), Australia (0% → 31.2%), UK (3% → 34.5%)
-   
 3) Strong link between EV sales and infrastructure.
    China EV sales: 1.8K → 12.9M, chargers: 530 → 4.33M
    US EV sales: 12.9K → 2.06M, chargers: 500 → 131K
-   
 4) Chargers per 1000 EVs decline over time.
    Example: Australia 477 → 87, Austria 1536 → 429
-
 5) EV growth is faster than infrastructure expansion.
-
 6) EV range improved consistently across all countries.
    From ~120 km to ~480–500 km (global trend)
-
 7) Developed countries lead in infrastructure.
    Norway, Netherlands, Switzerland show high charger density (1000+ per 1000 EVs in early years)
-
 8) Emerging economies show rapid growth but lower base.
    India: 0 → 34K chargers, EV sales: 136 → 181K
    Brazil: 0 → 16.5K chargers, EV sales: 30 → 103K
