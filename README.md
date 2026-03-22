@@ -333,9 +333,7 @@ To analyze EV adoption across different market segments (Commercial, Mass Market
 6) **Avg_EV_Market_Share_Pct–** EV penetration within each segment.
 7) **Avg_EV_Range_KM–** Reflects EV range improvements across segments.
 8) **EV_Growth_YoY_Pct–** Segment-wise growth trends.
-9) **Avg_Charging_Stations–** Represents the average availability of charging infrastructure, indicating overall infrastructure growth.
-**(Calculated Column)-** SUM(Charging_Stations) / Vehicle Segment
-
+9) **Avg_Charging_Stations–** Represents the average availability of charging infrastructure, indicating overall infrastructure growth.**(Calculated Column)-** SUM(Charging_Stations) / Vehicle Segment
 10) **EV_Share_of_Segment_Pct–** Shows the contribution of each vehicle segment to total EV sales.
 **(Calculated Column)-** Segment EV Sales / Total EV Sales * 100
     
@@ -362,9 +360,7 @@ To analyze the growth of EV charging infrastructure across countries and underst
 2) **Charging_Stations–** Total EV charging infrastructure.
 3) **Fast_Charger_Share_Pct–** Share of fast chargers.
 4) **EV_Sales–** Indicates total sales of ev thereby showcasing EV adoption level.
-5) **Chargers_per_1000_EVs–** Measures charging infrastructure adequacy by showing chargers available per 1000 EVs.
-   **(Calculated Column)-** Charging_Stations / EV_Sales * 1000
-   
+5) **Chargers_per_1000_EVs–** Measures charging infrastructure adequacy by showing chargers available per 1000 EVs.**(Calculated Column)-** Charging_Stations / EV_Sales * 1000   
 6) **Avg_EV_Range_KM–** Average distance an EV can travel on a full charge.
 7) **Urban_Population_Pct & GDP_per_Capita–** Both are demand and economic indicators.
 
