@@ -56,7 +56,7 @@ After importing the dataset into MySQL, initial data exploration was performed t
 SELECT COUNT(*) AS total_records
 FROM ev_vs_petrol;
 
-Analysis- This query counts the total number of records in the dataset, confirming that the data was imported correctly. The result showed that the table contains 1,200 rows.
+<u><b>Analysis</b></u>- This query counts the total number of records in the dataset, confirming that the data was imported correctly. The result showed that the table contains 1,200 rows.
 
 ### Query 2- Verify column names
 
