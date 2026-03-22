@@ -221,7 +221,7 @@ FROM ev_vs_petrol
 GROUP BY region, country
 ORDER BY region, regional_rank;
 
-**Analysis-** This query ranks countries by total EV sales within each region using the `DENSE_RANK()` window function. By partitioning the data by region, the ranking resets for each region, allowing comparison of EV sales performance among countries within the same geographic area. The results show that China ranks first in the APAC region and also leads overall EV sales, highlighting its dominant position in the global electric vehicle market.
+**Analysis-** This query ranks countries by total EV sales within each region using the DENSE_RANK() window function. By partitioning the data by region, the ranking resets for each region, allowing comparison of EV sales performance among countries within the same geographic area. The results show that China ranks first in the APAC region and also leads overall EV sales, highlighting its dominant position in the global electric vehicle market.
 
 ## Conclusion
 
@@ -237,22 +237,22 @@ After completing data cleaning and initial analysis in SQL, the project now move
 
 ## Sheets Description
 
-**Raw Data**
+**Raw Data-**
 Contains the primary dataset with variables related to EV sales, charging infrastructure, emissions, and market trends. It serves as the foundation for all analysis.
 
-**Global EV Trend**
+**Global EV Trend-**
 Analyzes EV growth over time, highlighting trends in sales, market share, infrastructure, and technological advancements.
 
-**Environment**
+**Environment-**
 Examines the relationship between EV adoption, emission regulations, and transport-related CO₂ emissions across countries.
 
-**Segment Analysis**
+**Segment Analysis-**
 Explores EV adoption across different segments (Commercial, Mass Market, Premium) and compares variations in sales, growth, and technology.
 
-**Infrastructure**
+**Infrastructure-**
 Focuses on EV charging infrastructure growth and evaluates whether it is keeping pace with increasing EV adoption.
 
-**Pivot Table**
+**Pivot Table-**
 Provides a summarized view of EV sales, infrastructure, and subsidies across regions for easy comparison and insights.
 
 ### Data Preparation
