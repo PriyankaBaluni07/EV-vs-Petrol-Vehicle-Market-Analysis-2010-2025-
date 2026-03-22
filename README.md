@@ -259,13 +259,9 @@ Provides a summarized view of EV sales, infrastructure, and subsidies across reg
 The following data preparation steps are performed in Excel to ensure data quality and consistency:
 
 1) Converted raw data into a structured table for efficient data handling, filtering, and structured references.
-
 2) Checked for missing values to maintain completeness and avoid analytical errors.
-
 3) Removed duplicate records to ensure data accuracy and integrity.
-
 4) Applied freeze panes to improve navigation and maintain header visibility.
-
 5) Validated data formats (dates, numbers, text, currency) to ensure consistency and reliable analysis.
 
 ## Global EV Trend Analysis
