@@ -34,6 +34,8 @@ The raw dataset contains 1,200 rows and roughly 22 columns, providing detailed i
 
 8) **ev_subsidy_usd-** The amount of government financial incentive provided for purchasing electric vehicles, measured in US dollars. This variable helps analyze how policy support and subsidies influence EV adoption across different nations.
 
+## SQL
+
 ## Database Setup
 **Step 1:** Create Database
 CREATE DATABASE electric_vehicles;
@@ -231,6 +233,8 @@ Country-level analysis shows that China dominates the EV market with 46,544,667 
 
 Overall, the findings highlight the important role of government policies, charging infrastructure, and market expansion in accelerating EV adoption, with China emerging as the global leader. Further analysis and visualization is conducted using Excel and Power BI to gain deeper insights into EV market trends.
 
+## EXCEL
+
 ## Excel Analysis and Visualization
 
 After completing data cleaning and initial analysis in SQL, the project now moves to Excel for deeper analysis. Initial insights were derived in SQL using aggregation and filtering queries to understand basic trends and distributions. In the next stage, Excel is used to perform detailed analytical operations such as time-series analysis, country-wise comparisons, cost evaluation, and environmental impact assessment using formulas and structured data exploration. This step focuses on generating meaningful insights from the dataset, which are further extended into Power BI for building interactive dashboards and visualizing the results effectively.
@@ -405,4 +409,56 @@ The last sheet presents a summarized view of EV sales, charging infrastructure, 
 4) Oceania and South America are still emerging markets with lower EV adoption and infrastructure.
 5) EV subsidies are highest in APAC and Europe, indicating strong government support.
 
+## POWER BI
+
+### Data Visualization & Dashboard Development
+After completing analysis in Excel, the project moves to Power BI for building interactive dashboards. The cleaned dataset (Raw Data sheet) was imported and validated using Power Query to ensure consistency. DAX measures were created to enable dynamic calculations such as total sales, market share, and growth metrics. This stage focuses on transforming insights into interactive visuals, allowing users to explore trends, compare regions, and understand key drivers of EV adoption.
+
+### Data Preparation (Power Query Editor)
+After importing the dataset into Power BI, the following steps were performed:
+
+1) Cleaned the dataset by removing unnecessary columns and duplicate records.
+2) Handled missing and null values to ensure data consistency.
+3) Renamed columns for better clarity and readability.
+4) Verified and validated data types across all fields.
+5) Applied all changes and loaded the final dataset into Power BI using Close & Apply.
+
+### Data Modelling
+
+1) Used a single structured table (EV_data) for building the data model in Power BI.
+2) Since the dataset was already well-organized, no relationships between multiple tables were required.
+3) Focused on creating an efficient and simplified data model for analysis.
+4) Developed DAX measures to enable dynamic and filter-based calculations.
+5) This approach ensured better performance and easier visualization building.
+
+### DAX Measures
+The following measures are calculated to enable dynamic, filter-responsive analysis within the dashboard, allowing users to explore trends, compare vehicle segments, and evaluate EV adoption across different regions and time periods-
+
+1) Total EV Sales
+2) Total Petrol Sales
+3) Total Diesel Sales
+4) Total Vehicle Sales
+5) EV Market Share %
+6) Average EV Growth
+7) Average EV Subsidy
+8) Total Charging Stations
+9) Average Fuel Price
+10) Average Electricity Price
+11) Total CO₂ Emissions
+
+## Dashboard Overview
+
+1) Provides a comprehensive and interactive view of the global EV market, highlighting key trends, comparisons, and influencing factors.
+2) KPI cards at the top summarize key metrics such as total EV sales, market share, growth rate, and subsidies for quick performance evaluation.
+3) Sales trend visuals illustrate the shift from petrol and diesel vehicles towards EVs over time, helping identify growth patterns.
+4) Additional visuals focus on segment-wise distribution, regional performance, and infrastructure readiness across countries.
+5) Interactive slicers(year and region) enable dynamic filtering, allowing users to explore data based on specific requirements.
+6) Overall, the "Global EV Market Analysis" dashboard transforms complex data into clear, actionable insights for better understanding of EV market dynamics.
+
+## Key Insights
+
+1) EV adoption demonstrates a consistent upward trajectory over recent years, indicating a structural shift towards electrification in the automotive market.
+2) Regions offering higher subsidies exhibit stronger EV penetration, suggesting a direct correlation between policy support and consumer adoption.
+3) Analysis of the Top 10 countries matrix shows that higher charging infrastructure is associated with increased EV sales, highlighting infrastructure availability as a critical enabler of adoption.
+4) A gradual decline in reliance on petrol and diesel vehicles reflects an ongoing transition towards cleaner and more sustainable transportation alternatives.
 
