@@ -446,7 +446,7 @@ The following measures are calculated to enable dynamic, filter-responsive analy
 10) Average Electricity Price
 11) Total CO₂ Emissions
 
-## Dashboard Overview
+### Dashboard Overview
 
 1) Provides a comprehensive and interactive view of the global EV market, highlighting key trends, comparisons, and influencing factors.
 2) KPI cards at the top summarize key metrics such as total EV sales, market share, growth rate, and subsidies for quick performance evaluation.
@@ -455,7 +455,7 @@ The following measures are calculated to enable dynamic, filter-responsive analy
 5) Interactive slicers(year and region) enable dynamic filtering, allowing users to explore data based on specific requirements.
 6) Overall, the "Global EV Market Analysis" dashboard transforms complex data into clear, actionable insights for better understanding of EV market dynamics.
 
-## Key Insights
+### Key Insights
 
 1) EV adoption demonstrates a consistent upward trajectory over recent years, indicating a structural shift towards electrification in the automotive market.
 2) Regions offering higher subsidies exhibit stronger EV penetration, suggesting a direct correlation between policy support and consumer adoption.
